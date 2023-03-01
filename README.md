@@ -14,7 +14,7 @@ To avoid proxy/firewall blockage it's recommended WebSockets are requested on po
 In order to do this, along with your sync web stack, you can either use a reverse proxy or two separate machines.
 You can find more details in the [server conf docs](http://socketo.me/docs/deploy#server_configuration).
 
-### Documentation
+### Documentation TEST2
 
 User and API documentation is available on Ratchet's website: http://socketo.me
 
