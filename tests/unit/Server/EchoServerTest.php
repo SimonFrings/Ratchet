@@ -1,5 +1,7 @@
 <?php
-namespace Ratchet\Server;
+
+namespace Ratchet\Tests\unit\Server;
+
 use Ratchet\Server\EchoServer;
 
 class EchoServerTest extends \PHPUnit_Framework_TestCase {

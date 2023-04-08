@@ -1,6 +1,8 @@
 <?php
-namespace Ratchet\Http;
-use Ratchet\AbstractMessageComponentTestCase;
+
+namespace Ratchet\Tests\unit\Http;
+
+use Ratchet\Tests\helpers\Ratchet\AbstractMessageComponentTestCase;
 
 /**
  * @covers Ratchet\Http\OriginCheck

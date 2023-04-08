@@ -1,5 +1,8 @@
 <?php
-namespace Ratchet\Http;
+
+namespace Ratchet\Tests\unit\Http;
+
+use Ratchet\Http\HttpRequestParser;
 
 /**
  * @covers Ratchet\Http\HttpRequestParser

@@ -1,5 +1,9 @@
 <?php
-namespace Ratchet\Wamp;
+
+namespace Ratchet\Tests\unit\Wamp;
+
+use Ratchet\Wamp\Topic;
+use Ratchet\Wamp\WampConnection;
 
 /**
  * @covers Ratchet\Wamp\WampConnection

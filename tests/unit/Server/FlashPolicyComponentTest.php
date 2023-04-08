@@ -1,5 +1,7 @@
 <?php
-namespace Ratchet\Application\Server;
+
+namespace Ratchet\Tests\unit\Server;
+
 use Ratchet\Server\FlashPolicy;
 
 /**

@@ -1,5 +1,7 @@
 <?php
-namespace Ratchet\Server;
+
+namespace Ratchet\Tests\unit\Server;
+
 use Ratchet\Server\IoServer;
 use React\EventLoop\StreamSelectLoop;
 use React\EventLoop\LoopInterface;

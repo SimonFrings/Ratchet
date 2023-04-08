@@ -1,5 +1,7 @@
 <?php
-namespace Ratchet\Session\Serialize;
+
+namespace Ratchet\Tests\unit\Session\Serialize;
+
 use Ratchet\Session\Serialize\PhpHandler;
 
 /**

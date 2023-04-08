@@ -1,5 +1,7 @@
 <?php
-namespace Ratchet;
+
+namespace Ratchet\Tests\helpers\Ratchet;
+
 use Ratchet\ConnectionInterface;
 use Ratchet\MessageComponentInterface;
 use Ratchet\WebSocket\WsServerInterface;

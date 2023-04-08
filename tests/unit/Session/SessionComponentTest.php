@@ -1,6 +1,8 @@
 <?php
-namespace Ratchet\Session;
-use Ratchet\AbstractMessageComponentTestCase;
+
+namespace Ratchet\Tests\unit\Session;
+
+use Ratchet\Tests\helpers\Ratchet\AbstractMessageComponentTestCase;
 use Symfony\Component\HttpFoundation\Session\Storage\Handler\PdoSessionHandler;
 use Symfony\Component\HttpFoundation\Session\Storage\Handler\NullSessionHandler;
 

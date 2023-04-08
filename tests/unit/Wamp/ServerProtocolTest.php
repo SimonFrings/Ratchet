@@ -1,7 +1,11 @@
 <?php
-namespace Ratchet\Wamp;
-use Ratchet\Mock\Connection;
-use Ratchet\Mock\WampComponent as TestComponent;
+
+namespace Ratchet\Tests\unit\Wamp;
+
+use Ratchet\Tests\helpers\Ratchet\Mock\Connection;
+use Ratchet\Tests\helpers\Ratchet\Mock\WampComponent as TestComponent;
+use Ratchet\Wamp\ServerProtocol;
+use Ratchet\Wamp\WampConnection;
 
 /**
  * @covers \Ratchet\Wamp\ServerProtocol

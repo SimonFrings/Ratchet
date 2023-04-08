@@ -1,5 +1,7 @@
 <?php
-namespace Ratchet\Mock;
+
+namespace Ratchet\Tests\helpers\Ratchet\Mock;
+
 use Ratchet\Wamp\WampServerInterface;
 use Ratchet\WebSocket\WsServerInterface;
 use Ratchet\ConnectionInterface;

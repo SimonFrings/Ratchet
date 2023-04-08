@@ -1,5 +1,7 @@
 <?php
-namespace Ratchet\Mock;
+
+namespace Ratchet\Tests\helpers\Ratchet\Mock;
+
 use Ratchet\ConnectionInterface;
 
 class Connection implements ConnectionInterface {

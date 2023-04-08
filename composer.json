@@ -25,6 +25,11 @@
             "Ratchet\\": "src/Ratchet"
         }
     }
+  , "autoload-dev": {
+        "psr-4": {
+            "Ratchet\\Tests\\": "tests/"
+        }
+    }
   , "require": {
         "php": ">=5.4.2"
       , "ratchet/rfc6455": "^0.3.1"

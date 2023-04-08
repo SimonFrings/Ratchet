@@ -1,5 +1,7 @@
 <?php
-namespace Ratchet\Server;
+
+namespace Ratchet\Tests\unit\Server;
+
 use Ratchet\Server\IpBlackList;
 
 /**

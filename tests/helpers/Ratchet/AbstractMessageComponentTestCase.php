@@ -1,5 +1,6 @@
 <?php
-namespace Ratchet;
+
+namespace Ratchet\Tests\helpers\Ratchet;
 
 abstract class AbstractMessageComponentTestCase extends \PHPUnit_Framework_TestCase {
     protected $_app;

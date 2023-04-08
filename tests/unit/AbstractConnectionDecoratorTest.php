@@ -1,6 +1,8 @@
 <?php
-namespace Ratchet;
-use Ratchet\Mock\ConnectionDecorator;
+
+namespace Ratchet\Tests\unit;
+
+use Ratchet\Tests\helpers\Ratchet\Mock\ConnectionDecorator;
 
 /**
  * @covers Ratchet\AbstractConnectionDecorator

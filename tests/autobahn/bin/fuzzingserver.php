@@ -1,4 +1,7 @@
 <?php
+
+namespace Ratchet\Tests\autobahn\bin;
+
 use Ratchet\ConnectionInterface;
 
     require dirname(dirname(dirname(__DIR__))) . '/vendor/autoload.php';

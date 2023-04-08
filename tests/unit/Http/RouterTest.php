@@ -1,5 +1,9 @@
 <?php
-namespace Ratchet\Http;
+
+namespace Ratchet\Tests\unit\Http;
+
+use Ratchet\Http\HttpServer;
+use Ratchet\Http\Router;
 use Ratchet\WebSocket\WsServerInterface;
 use Symfony\Component\Routing\Exception\ResourceNotFoundException;
 use Symfony\Component\Routing\Matcher\UrlMatcherInterface;
@@ -111,7 +115,7 @@ class RouterTest extends \PHPUnit_Framework_TestCase {
         $this->_matcher->expects($this->any())->method('match')->will(
             $this->returnValue(['_controller' => $controller, 'foo' => 'bar', 'baz' => 'qux'])
         );
-        $conn = $this->getMock('Ratchet\Mock\Connection');
+        $conn = $this->getMock('Ratchet\Tests\helpers\Ratchet\Mock\Connection');
 
         $router = new Router($this->_matcher);
 
@@ -126,7 +130,7 @@ class RouterTest extends \PHPUnit_Framework_TestCase {
             $this->returnValue(['_controller' => $controller, 'foo' => 'bar', 'baz' => 'qux'])
         );
 
-        $conn    = $this->getMock('Ratchet\Mock\Connection');
+        $conn    = $this->getMock('Ratchet\Tests\helpers\Ratchet\Mock\Connection');
         $request = $this->getMock('Psr\Http\Message\RequestInterface');
         $uri = new \GuzzleHttp\Psr7\Uri('ws://doesnt.matter/endpoint?hello=world&foo=nope');
 
@@ -151,10 +155,10 @@ class RouterTest extends \PHPUnit_Framework_TestCase {
         $this->_conn->expects($this->once())->method('close');
 
         $header = "GET /nope HTTP/1.1
-Upgrade: websocket                                   
-Connection: upgrade                                  
-Host: localhost                                 
-Origin: http://localhost                        
+Upgrade: websocket
+Connection: upgrade
+Host: localhost
+Origin: http://localhost
 Sec-WebSocket-Version: 13\r\n\r\n";
 
         $app = new HttpServer(new Router(new UrlMatcher(new RouteCollection, new RequestContext)));

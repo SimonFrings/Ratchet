@@ -1,5 +1,8 @@
 <?php
-namespace Ratchet\Wamp;
+
+namespace Ratchet\Tests\unit\Wamp;
+
+use Ratchet\Wamp\TopicManager;
 
 /**
  * @covers Ratchet\Wamp\TopicManager
@@ -217,7 +220,7 @@ class TopicManagerTest extends \PHPUnit_Framework_TestCase {
 
     public function testGetSubProtocolsBubbles() {
         $subs = array('hello', 'world');
-        $app  = $this->getMock('Ratchet\Wamp\Stub\WsWampServerInterface');
+        $app  = $this->getMock('Ratchet\Tests\helpers\Ratchet\Wamp\Stub\WsWampServerInterface');
         $app->expects($this->once())->method('getSubProtocols')->will($this->returnValue($subs));
         $mngr = new TopicManager($app);
 
