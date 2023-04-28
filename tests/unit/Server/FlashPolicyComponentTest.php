@@ -1,15 +1,19 @@
 <?php
 namespace Ratchet\Application\Server;
 use Ratchet\Server\FlashPolicy;
+use Ratchet\TestCase;
 
 /**
  * @covers Ratchet\Server\FlashPolicy
  */
-class FlashPolicyTest extends \PHPUnit_Framework_TestCase {
+class FlashPolicyTest extends TestCase {
 
     protected $_policy;
 
-    public function setUp() {
+    /**
+     * @before
+     */
+    public function setUpFlashPolicy() {
         $this->_policy = new FlashPolicy();
     }
 
@@ -123,7 +127,7 @@ class FlashPolicyTest extends \PHPUnit_Framework_TestCase {
     }
 
     public function testErrorClosesConnection() {
-        $conn = $this->getMock('\\Ratchet\\ConnectionInterface');
+        $conn = $this->getMockBuilder('\\Ratchet\\ConnectionInterface')->getMock();
         $conn->expects($this->once())->method('close');
 
         $this->_policy->onError($conn, new \Exception);
@@ -132,7 +136,7 @@ class FlashPolicyTest extends \PHPUnit_Framework_TestCase {
     public function testOnMessageSendsString() {
         $this->_policy->addAllowedAccess('*', '*');
 
-        $conn = $this->getMock('\\Ratchet\\ConnectionInterface');
+        $conn = $this->getMockBuilder('\\Ratchet\\ConnectionInterface')->getMock();
         $conn->expects($this->once())->method('send')->with($this->isType('string'));
 
         $this->_policy->onMessage($conn, ' ');
@@ -140,13 +144,13 @@ class FlashPolicyTest extends \PHPUnit_Framework_TestCase {
 
     public function testOnOpenExists() {
         $this->assertTrue(method_exists($this->_policy, 'onOpen'));
-        $conn = $this->getMock('\Ratchet\ConnectionInterface');
+        $conn = $this->getMockBuilder('\Ratchet\ConnectionInterface')->getMock();
         $this->_policy->onOpen($conn);
     }
 
     public function testOnCloseExists() {
         $this->assertTrue(method_exists($this->_policy, 'onClose'));
-        $conn = $this->getMock('\Ratchet\ConnectionInterface');
+        $conn = $this->getMockBuilder('\Ratchet\ConnectionInterface')->getMock();
         $this->_policy->onClose($conn);
     }
 }
